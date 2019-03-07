@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="675.0" maxWidth="600.0" prefHeight="675.0" prefWidth="600.0" style="-fx-background-color: white;" styleClass="fontePadrao" stylesheets="@EstiloGeral.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lunarez.eludika.main.controller.TelaCadastroController">
+    
+   <children>
+      <GridPane prefHeight="675.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints percentHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+          <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="3.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="3.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="3.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="3.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="3.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="3.0" vgrow="SOMETIMES" />
+          <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="18.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+             
+                  <TextField fx:id="textFieldNomeCompleto" maxHeight="36.0" maxWidth="440.0" minHeight="36.0" minWidth="440.0" onKeyReleased="#validarNomeCompleto" onKeyTyped="#validarNomeCompleto" prefHeight="36.0" prefWidth="440.0" promptText="Nome Completo" styleClass="bordas1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label fx:id="labelNomeCompleto" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="600.0" minHeight="20.0" minWidth="600.0" prefHeight="20.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choiceBoxTipoUsuario" maxHeight="36.0" maxWidth="440.0" minHeight="36.0" minWidth="440.0" prefHeight="36.0" prefWidth="440.0" styleClass="bordas1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label fx:id="labelTipoUsuario" alignment="CENTER" contentDisplay="CENTER" maxWidth="600.0" minWidth="600.0" prefHeight="14.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: orange;" styleClass="fundoImagem1">
+               <children>
+                   
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutY="12.0" text="Crie sua Conta" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     
+                              </Label>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="textFieldNomeDeUsuario" maxHeight="36.0" maxWidth="440.0" minHeight="36.0" minWidth="440.0" onKeyReleased="#validarNomeDeUsuario" onKeyTyped="#validarNomeDeUsuario" prefHeight="36.0" prefWidth="440.0" promptText="Nome de usuário" styleClass="bordas1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <TextField fx:id="textFieldEmail" maxHeight="36.0" maxWidth="440.0" minHeight="36.0" minWidth="440.0" onKeyReleased="#definirTamanhoDoEmail" prefHeight="36.0" prefWidth="440.0" promptText="E-mail" styleClass="bordas1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+            <Label fx:id="labelNomeDeUsuario" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="600.0" minHeight="20.0" minWidth="600.0" prefHeight="20.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEmail" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="600.0" minHeight="20.0" minWidth="600.0" prefHeight="20.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+             
+                        <PasswordField fx:id="passwordFieldSenha" maxHeight="36.0" maxWidth="440.0" minHeight="36.0" minWidth="440.0" prefHeight="36.0" prefWidth="440.0" promptText="Crie uma senha" styleClass="bordas1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+            <PasswordField fx:id="passwordFieldRepetirSenha" maxHeight="36.0" maxWidth="440.0" minHeight="36.0" minWidth="440.0" prefHeight="36.0" prefWidth="440.0" promptText="Digite a senha novamente" styleClass="bordas1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+            <DatePicker fx:id="datePickerNascimento" editable="false" maxHeight="36.0" maxWidth="440.0" minHeight="36.0" minWidth="440.0" prefHeight="36.0" prefWidth="440.0" promptText="Data de Nascimento" styleClass="bordas1" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
+            <Label fx:id="labelSenha" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="600.0" minHeight="20.0" minWidth="600.0" prefHeight="20.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSenhaNovamente" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="600.0" minHeight="20.0" minWidth="600.0" prefHeight="20.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNascimento" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="600.0" minHeight="20.0" minWidth="600.0" prefHeight="20.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: orange;" GridPane.rowIndex="16">
+               <children>
+                  <GridPane layoutX="166.0" layoutY="-11.0" styleClass="fundoImagem1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints percentHeight="100.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button id="botaoEntrar" fx:id="buttonConcluirCadastro" maxHeight="36.0" maxWidth="210.0" minHeight="36.0" minWidth="210.0" mnemonicParsing="false" onAction="#handleButtonConcluirCadastro" prefHeight="36.0" prefWidth="210.0" text="CADASTRAR-SE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                           <styleClass>
+                              <String fx:value="buttonPositivo" />
+                              <String fx:value="bordas1" />
+                           </styleClass>
+                        </Button>
+                         
+                              <Button id="botaoEntrar" fx:id="buttonCancelarCadastro" maxHeight="36.0" maxWidth="210.0" minHeight="36.0" minWidth="210.0" mnemonicParsing="false" onAction="#handleButtonCancelarCadastro" prefHeight="36.0" prefWidth="210.0" styleClass="bordas1" text="CANCELAR" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      
+   </children>
+   
+</AnchorPane>
